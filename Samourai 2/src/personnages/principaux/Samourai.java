@@ -11,22 +11,12 @@ public class Samourai extends Ronin {
 	
 	@Override
 	public void direBonjour() {
-		
+		super.direBonjour();
+		parler("Mon seigneur est "+ this.seigneur);
 	}
 	
 	public void boire(String b) {
-		
+		parler("Mmmm, un bon verre de " + b + " ! GLOUPS !");
 	}
-	
-	/*public static void main(String[] args) {
-		Ronin musaichi = new Samourai("Akimoto" , 20 , "the", "Miyamoto");
-		Samourai samourai = (Samourai) musaichi;
-		musaichi.boire();
-		musaichi.direBonjour();
-		samourai.boire();
-		samourai.boire("saké");
-		samourai.direBonjour();
-		musaichi.boire("saké");
-	}*/
 	
 }

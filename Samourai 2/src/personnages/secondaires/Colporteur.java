@@ -10,7 +10,10 @@ public class Colporteur extends Commercant{
 	
 	@Override
 	public int seFaireExtorquer() {
-		return 1;
+		int argent = getArgent()/2;
+		perdreArgent(argent);
+		parler("Je me suis fait extorquer, mais j'ai quand même pu sauver la moitié de mon argent hihihi");
+		return argent;
 	}
 
 }

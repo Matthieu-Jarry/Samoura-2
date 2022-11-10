@@ -13,15 +13,15 @@ package personnages;
 	}
 	
 	public void parler(String texte) {
-		System.out.println(this.nom + " - " + texte );
+		System.out.println("("+getNom() + ") - " + texte );
 	}
 	
 	public void direBonjour() {
-		parler("Bonjour ! Je m'appelle " + this.nom + " et j'aime boire du " + this.boisson);
+		parler("Bonjour ! Je m'appelle " + getNom() + " et j'aime boire du " + getBoisson() + " et j'ai " + getArgent() + " sous");
 	}
 	
 	public void boire() {
-		parler("Mmmm, un bon verre de " + this.boisson + " ! GLOUPS !");
+		parler("Mmmm, un bon verre de " + getBoisson() + " ! GLOUPS !");
 	}
 
 	public String getNom() {

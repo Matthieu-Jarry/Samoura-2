@@ -11,8 +11,6 @@ public class Yakuza extends Humain{
 		super(nom, argent, boisson);
 		this.clan = clan;
 		this.reputation = 0;
-		
-		
 	}
 
 	public String getClan() {
@@ -24,20 +22,27 @@ public class Yakuza extends Humain{
 	}
 	
 	public void extorquer(Commercant c) {
-		
+		gagnerArgent(c.seFaireExtorquer());
+		this.reputation++;
+		parler("J'ai piqué tout le fric de " + c.getNom());
 	}
 	
 	public void gagnerDuel() {
-		
+		this.reputation++;
+		parler("J'ai gagné mon duel");
 	}
 	
 	public void perdreDuel() {
-		
+		int argent = getArgent();
+		perdreArgent(argent);
+		this.reputation--;
+		parler("J'ai perdu mon duel et mes " + argent + " sous");
 	}
 	
 	@Override
 	public void direBonjour() {
-		
+		super.direBonjour();
+		parler("Mon clan est celui de " + getClan());
 	}
 	
 

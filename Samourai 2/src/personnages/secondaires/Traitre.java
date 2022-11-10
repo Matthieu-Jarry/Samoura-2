@@ -14,16 +14,29 @@ public class Traitre extends Samourai{
 	}
 	
 	public void extorquer(Commercant c) {
-		
+		if (this.traitrise < 3) {
+			gagnerArgent(c.seFaireExtorquer());
+			parler("J'ai piqué tout le fric de " + c.getNom());
+			this.traitrise++;
+		}
+		else {
+			parler("Je ne peux plus extorquer sinon je risque de me faire remarquer");
+		}
 	}
 	
 	@Override
 	public void direBonjour() {
-		
+		super.direBonjour();
+		parler("Mon niveau de traitrise est à " + this.traitrise);
 	}
 	
 	public void faireLeGentil(Humain h, int argent) {
-		
+		h.gagnerArgent(argent);
+		this.traitrise -= argent/10; 
+		if (this.traitrise < 0) {
+			this.traitrise = 0;
+		}
+		parler("Je fais ami-ami avec " + h.getNom() + " en lui donnant " + argent + " sous");
 	}
 
 }

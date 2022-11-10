@@ -32,7 +32,6 @@ public class GrandMere extends Humain{
 	
 	public void ragoter() {
 		int alea = r.nextInt(this.nbConnaissances);
-		System.out.println(alea);
 		Humain h = memoire[alea];
 		if (h instanceof Traitre) {
 			parler("Je sais que "+ h.getNom() + " est un traître!");

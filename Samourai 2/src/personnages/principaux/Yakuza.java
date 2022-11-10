@@ -32,11 +32,12 @@ public class Yakuza extends Humain{
 		parler("J'ai gagné mon duel");
 	}
 	
-	public void perdreDuel() {
+	public int perdreDuel() {
 		int argent = getArgent();
 		perdreArgent(argent);
 		this.reputation--;
 		parler("J'ai perdu mon duel et mes " + argent + " sous");
+		return argent;
 	}
 	
 	@Override

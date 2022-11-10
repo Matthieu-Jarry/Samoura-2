@@ -1,6 +1,5 @@
 package histoires;
 
-import personnages.Humain;
 import personnages.principaux.Commercant;
 import personnages.principaux.Ronin;
 import personnages.principaux.Yakuza;
@@ -12,9 +11,6 @@ import personnages.secondaires.Traitre;
 public class MonHistoire {
 
 	public static void main(String[] args) {
-		  Humain humain = new Humain("Prof", 10, "Porto");
-		  humain.direBonjour();
-		  humain.boire();
 		  Commercant commercant = new Commercant("Marchand", 35);
 		  commercant.direBonjour();
 		  Yakuza yakusa = new Yakuza("Yaku␣le␣noir", 42,

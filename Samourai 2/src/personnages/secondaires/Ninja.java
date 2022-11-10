@@ -2,6 +2,7 @@ package personnages.secondaires;
 
 import java.util.Random;
 
+import personnages.principaux.Commercant;
 import personnages.principaux.Yakuza;
 
 public class Ninja extends Yakuza{
@@ -23,6 +24,19 @@ public class Ninja extends Yakuza{
 				default ->
 				throw new IllegalArgumentException("Unexpected value: " + alea);
 				};
+	}
+	
+	private int extorquerMefiant(Commercant c) {
+		return 1;
+	}
+	
+	@Override
+	public void extorquer(Commercant c) {
+		
+	}
+	
+	public void revenirExtorquer() {
+		
 	}
 	
 	@Override

@@ -19,9 +19,8 @@ public class Ronin extends Humain{
 	
 	public void provoquer(Yakuza y) {
 		if (this.honneur*2 > y.getReputation()) {
-			gagnerArgent(y.getArgent());
+			gagnerArgent(y.perdreDuel());
 			this.honneur++;
-			y.perdreDuel();
 			parler("Je t’ai eu petit yakusa!");
 		}
 		else {

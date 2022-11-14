@@ -1,10 +1,11 @@
 package personnages.secondaires;
 
 import personnages.Humain;
+import personnages.IPleutre;
 import personnages.principaux.Commercant;
 import personnages.principaux.Samourai;
 
-public class Traitre extends Samourai{
+public class Traitre extends Samourai implements IPleutre{
 	
 	private int traitrise;
 
@@ -37,6 +38,12 @@ public class Traitre extends Samourai{
 			this.traitrise = 0;
 		}
 		parler("Je fais ami-ami avec " + h.getNom() + " en lui donnant " + argent + " sous");
+	}
+
+	@Override
+	public void fuir() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

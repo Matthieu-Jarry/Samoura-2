@@ -2,7 +2,7 @@ package personnages;
 
 public class ClanNinja {
 	
-	private static String[] clansNinja;
+	private static String[] clansNinja = new String[30];
 	private String clan;
 	
 	public ClanNinja(String clan) {

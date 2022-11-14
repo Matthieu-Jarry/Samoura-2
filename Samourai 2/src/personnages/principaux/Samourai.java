@@ -1,6 +1,9 @@
 package personnages.principaux;
 
-public class Samourai extends Ronin {
+import personnages.Humain;
+import personnages.IGuerrier;
+
+public class Samourai extends Ronin implements IGuerrier{
 
 	private String seigneur;
 
@@ -17,6 +20,12 @@ public class Samourai extends Ronin {
 	
 	public void boire(String b) {
 		parler("Mmmm, un bon verre de " + b + " ! GLOUPS !");
+	}
+
+	@Override
+	public void combattre(Humain h) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

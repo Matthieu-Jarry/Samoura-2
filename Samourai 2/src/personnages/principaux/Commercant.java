@@ -1,8 +1,9 @@
 package personnages.principaux;
 
 import personnages.Humain;
+import personnages.IPleutre;
 
-public class Commercant extends Humain {
+public class Commercant extends Humain implements IPleutre {
 
 	public Commercant(String nom, int argent) {
 		super(nom, argent, "thé");
@@ -18,6 +19,12 @@ public class Commercant extends Humain {
 	public void recevoir(int n) {
 		gagnerArgent(n);
 		parler("Merci beaucoup pour le don de " +n);
+	}
+
+	@Override
+	public void fuir() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -6,7 +6,7 @@ public abstract class Humain {
 	private int argent;
 	private String boisson;
 	
-	public Humain(String nom, int argent, String boisson) {
+	protected Humain(String nom, int argent, String boisson) {
 		this.nom = nom;
 		this.argent = argent;
 		this.boisson = boisson;
